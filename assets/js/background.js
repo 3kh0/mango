@@ -152,7 +152,7 @@ export default function init() {
       color = parameters[i][0];
       // eslint-disable-next-line no-unused-vars
       let h = ((360 * (color[0] + time)) % 360) / 360;
-      materials[i].color.setHSL(h, color[1], color[2]);
+      //materials[i].color.setHSL(h, color[1], color[2]);
       //this sets a hue shift, looks kinda funny tho, but maybe for june
     }
 
