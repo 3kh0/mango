@@ -9,7 +9,7 @@
           <div class="flex-shrink-0">
             <NuxtLink
               to="/"
-              class="text-white text-2xl font-bold gay transition-colors hover:scale-105 transform"
+              class="text-white text-2xl font-bold transition-colors hover:scale-105 transform"
             >
               3kh0.net
             </NuxtLink>
@@ -58,7 +58,6 @@
 <style scoped>
 header {
   backdrop-filter: blur(3px); /* Adds a blur effect */
-  z-index: 10; /* Ensure it is above the starry background */
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -70,12 +69,12 @@ header:hover {
 .lgbt {
   background: linear-gradient(
     to right,
-    red,
+    #ff0000,
     #ff7f00,
-    #ff0,
-    #0f0,
-    #00f,
-    indigo,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
     #8f00ff
   );
   background-size: 400% 100%;
@@ -96,24 +95,5 @@ header:hover {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.gay {
-  background: linear-gradient(
-    to right,
-    #018e71,
-    #21cfac,
-    #99e9c2,
-    #fff,
-    #7cafe3,
-    #4f47cd,
-    #3b1379
-  );
-  background-size: 400% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: lgbt 10s ease-in-out infinite;
-  display: inline-block;
 }
 </style>
