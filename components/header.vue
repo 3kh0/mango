@@ -1,9 +1,9 @@
 <template>
   <div class="fixed top-0 left-0 w-full h-16">
     <header
-      class="bg-transparent backdrop-blur-md shadow-md z-90 max-w-4xl mx-auto rounded-4xl mt-5 border border-green-500 transition-all duration-300 relative"
+      class="bg-transparent backdrop-blur-md shadow-md z-90 max-w-6xl mx-auto rounded-4xl mt-5 border border-green-500/40 transition-all duration-300 relative"
     >
-      <nav class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <!-- Logo -->
           <div class="flex-shrink-0">
