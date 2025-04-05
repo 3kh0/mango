@@ -5,7 +5,6 @@
     >
       <div class="w-full mx-auto px-3 sm:px-4 lg:px-6">
         <div class="flex justify-between items-center h-14 sm:h-16">
-          <!-- Logo -->
           <div class="flex-shrink-0">
             <NuxtLink
               to="/"
@@ -15,7 +14,6 @@
             </NuxtLink>
           </div>
 
-          <!-- Desktop Navigation -->
           <div class="hidden md:flex space-x-4 lg:space-x-6">
             <NuxtLink
               to="/"
@@ -51,9 +49,8 @@
             </NuxtLink>
           </div>
 
-          <!-- Hamburger Button -->
           <button
-            @click="toggleMenu"
+            @click="toggle"
             class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-green-400 hover:text-green-300 focus:outline-none"
             aria-label="Main menu"
           >
@@ -89,7 +86,6 @@
         </div>
       </div>
 
-      <!-- Mobile menu -->
       <div
         :class="[
           isOpen
@@ -104,14 +100,14 @@
           <div class="flex flex-col space-y-3">
             <NuxtLink
               to="/"
-              @click="closeMenu"
+              @click="close"
               class="text-white hover:text-green-400 transition-colors px-3 py-2 rounded-md text-lg"
             >
               Home
             </NuxtLink>
             <NuxtLink
               to="/projects"
-              @click="closeMenu"
+              @click="close"
               class="text-white hover:text-green-400 transition-colors px-3 py-2 rounded-md text-lg"
             >
               Projects
@@ -119,7 +115,7 @@
             <a
               href="https://blog.3kh0.net"
               target="_blank"
-              @click="closeMenu"
+              @click="close"
               class="text-white hover:text-green-400 transition-colors px-3 py-2 rounded-md text-lg"
             >
               Blog
@@ -127,14 +123,14 @@
             <a
               href="https://extra.3kh0.net"
               target="_blank"
-              @click="closeMenu"
+              @click="close"
               class="text-white hover:text-green-400 transition-colors px-3 py-2 rounded-md text-lg"
             >
               Extras
             </a>
             <NuxtLink
               to="/contact"
-              @click="closeMenu"
+              @click="close"
               class="text-white hover:text-green-400 transition-colors px-3 py-2 rounded-md text-lg"
             >
               Contact
@@ -147,14 +143,10 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-
 const isOpen = ref(false);
 
-const toggleMenu = () => {
+const toggle = () => {
   isOpen.value = !isOpen.value;
-
-  // When menu is open, prevent scrolling
   if (isOpen.value) {
     document.body.style.overflow = "hidden";
   } else {
@@ -162,23 +154,22 @@ const toggleMenu = () => {
   }
 };
 
-const closeMenu = () => {
+const close = () => {
   isOpen.value = false;
   document.body.style.overflow = "";
 };
 
-// Close the mobile menu when window is resized to desktop size
 onMounted(() => {
-  const handleResize = () => {
+  const resize = () => {
     if (window.innerWidth >= 768) {
-      closeMenu();
+      close();
     }
   };
 
-  window.addEventListener("resize", handleResize);
+  window.addEventListener("resize", resize);
 
   onBeforeUnmount(() => {
-    window.removeEventListener("resize", handleResize);
+    window.removeEventListener("resize", resize);
   });
 });
 </script>

@@ -3,7 +3,7 @@
     ref="footer"
     class="fixed bottom-0 left-0 right-0 px-3 sm:px-4 md:px-6 transition-all duration-500 ease-in-out"
     :class="{
-      'translate-y-full': !isVisible,
+      'translate-y-full': !visible,
       'translate-y-[calc(100%-4rem)]': !expanded,
     }"
   >
@@ -11,10 +11,9 @@
       <div
         class="bg-transparent backdrop-blur-[3px] border border-green-500/20 rounded-t-2xl transition-all duration-300"
       >
-        <!-- Always visible part -->
         <div
           class="h-16 flex items-center justify-center cursor-pointer"
-          @click="toggleFooter"
+          @click="toggle"
         >
           <div class="flex items-center gap-2 text-green-400">
             <svg
@@ -38,6 +37,7 @@
           </div>
         </div>
 
+        <!-- 88x31 -->
         <div class="px-6 pb-6">
           <div class="flex flex-wrap justify-center gap-2 mb-6">
             <img
@@ -105,7 +105,6 @@
               alt="Fuck Facebook"
               class="w-[88px] h-[31px] transition-transform duration-200 hover:scale-110 hover:z-10"
             />
-            <!-- Add more buttons as needed -->
           </div>
 
           <!-- fuggin links and shi-->
@@ -183,59 +182,46 @@
 <script setup>
 const footer = ref(null);
 const expanded = ref(false);
-const isVisible = ref(false);
+const visible = ref(false);
 let lastScrollY = 0;
-const SHOW_THRESHOLD = 250; // Distance from bottom to show footer
-const HIDE_THRESHOLD = 100; // Distance to scroll up before hiding footer
 
-const toggleFooter = () => {
+const toggle = () => {
   expanded.value = !expanded.value;
 };
 
-// Handle scroll events to show/hide footer
-const handleScroll = () => {
-  const currentScrollY = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const documentHeight = document.documentElement.scrollHeight;
-  const distanceFromBottom = documentHeight - (currentScrollY + windowHeight);
-  const isScrollingUp = currentScrollY < lastScrollY;
-  const isNearBottom = distanceFromBottom < SHOW_THRESHOLD;
+const scrolling = () => {
+  const wy = window.scrollY;
+  const wh = window.innerHeight;
+  const dh = document.documentElement.scrollHeight;
+  const dtob = dh - (wy + wh);
+  const goingUp = wy < lastScrollY;
+  const nearBottom = dtob < 250;
 
-  // Show footer when near bottom
-  if (isNearBottom) {
-    isVisible.value = true;
-  }
-  // Hide footer when scrolling up and not near bottom
-  else if (
-    isScrollingUp &&
-    !isNearBottom &&
-    currentScrollY < documentHeight - windowHeight - HIDE_THRESHOLD
-  ) {
-    isVisible.value = false;
-    // Also collapse the expanded state when hiding
+  if (nearBottom) {
+    visible.value = true;
+  } else if (goingUp && !nearBottom && wy < dh - wh - 100) {
+    visible.value = false;
     expanded.value = false;
   }
 
-  lastScrollY = currentScrollY;
+  lastScrollY = wy;
 };
 
-// Handle clicks outside the footer
-const handleClickOutside = (event) => {
+const clickOut = (event) => {
   if (expanded.value && footer.value && !footer.value.contains(event.target)) {
     expanded.value = false;
   }
 };
 
 onMounted(() => {
-  document.addEventListener("scroll", handleScroll, { passive: true });
-  document.addEventListener("click", handleClickOutside);
-  // Initial check for page load
-  handleScroll();
+  document.addEventListener("scroll", scrolling, { passive: true });
+  document.addEventListener("click", clickOut);
+  scrolling();
 });
 
 onUnmounted(() => {
-  document.removeEventListener("scroll", handleScroll);
-  document.removeEventListener("click", handleClickOutside);
+  document.removeEventListener("scroll", scrolling);
+  document.removeEventListener("click", clickOut);
 });
 </script>
 
