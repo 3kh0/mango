@@ -125,7 +125,7 @@
               Blog
             </a>
             <a
-              href="https://extras.3kh0.net"
+              href="https://extra.3kh0.net"
               target="_blank"
               @click="closeMenu"
               class="text-white hover:text-green-400 transition-colors px-3 py-2 rounded-md text-lg"
