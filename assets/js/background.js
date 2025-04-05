@@ -59,7 +59,6 @@ export default function init() {
       container.id = "background";
       document.body.appendChild(container);
     }
-    container.style.opacity = 0;
 
     const positions = [];
     count = 1000; // add more for lag
@@ -115,16 +114,6 @@ export default function init() {
     document.addEventListener("mousemove", onDocumentMouseMove, false);
     document.addEventListener("touchstart", onDocumentTouchStart, false);
     document.addEventListener("touchmove", onDocumentTouchMove, false);
-
-    // Fade in
-    let opacity = 0;
-    const fadeInterval = setInterval(function () {
-      opacity += 0.01;
-      container.style.opacity = opacity;
-      if (opacity >= 1) {
-        clearInterval(fadeInterval);
-      }
-    }, 10);
   }
 
   function animate() {
