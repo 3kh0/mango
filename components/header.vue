@@ -1,7 +1,7 @@
 <template>
   <div class="fixed top-0 left-0 w-full z-50 px-3 sm:px-4 md:px-6">
     <header
-      class="bg-black/20 backdrop-blur-md shadow-md max-w-6xl mx-auto rounded-2xl sm:rounded-4xl mt-3 sm:mt-4 md:mt-5 border border-green-500/40 transition-all duration-300 relative"
+      class="bg-transparent backdrop-blur-[3px] shadow-md max-w-6xl mx-auto rounded-2xl sm:rounded-4xl mt-3 sm:mt-4 md:mt-5 border border-green-500/40 transition-all duration-300 relative"
     >
       <div class="w-full mx-auto px-3 sm:px-4 lg:px-6">
         <div class="flex justify-between items-center h-14 sm:h-16">
@@ -99,7 +99,7 @@
         class="absolute top-full left-2 right-2 sm:left-3 sm:right-3 z-20 transition-all duration-300 transform origin-top md:hidden mt-2"
       >
         <div
-          class="bg-black/80 backdrop-blur-md px-3 py-4 rounded-xl border border-green-500/40 shadow-lg shadow-green-500/20"
+          class="bg-transparent backdrop-blur-[3px] px-3 py-4 rounded-xl border border-green-500/40 shadow-lg shadow-green-500/20"
         >
           <div class="flex flex-col space-y-3">
             <NuxtLink
