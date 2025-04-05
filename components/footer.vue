@@ -108,12 +108,7 @@
           </div>
 
           <!-- fuggin links and shi-->
-          <div class="text-center text-md text-gray-400 space-y-2">
-            <p class="flex items-center justify-center gap-1">
-              Made with
-              <span class="text-green-400">💚</span>
-              by Echo. Dedicated to the fallen friends.
-            </p>
+          <div class="text-center text-md text-gray-400 space-y-2 mb-4">
             <p class="flex items-center justify-center gap-4">
               <a
                 href="https://github.com/3kh0/mango"
@@ -209,6 +204,14 @@
                 </svg>
                 PGP
               </a>
+            </p>
+            <p class="flex items-center justify-center gap-1">
+              Made with
+              <span class="text-green-400">💚</span> and my two paws.
+            </p>
+            <p class="flex items-center justify-center gap-1">
+              Dedicated to the friends that have fallen and the ones that
+              continue to fight.
             </p>
           </div>
         </div>
