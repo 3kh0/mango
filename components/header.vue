@@ -56,7 +56,7 @@
           >
             <svg
               class="h-5 w-5 sm:h-6 sm:w-6"
-              :class="{ hidden: isOpen, block: !isOpen }"
+              :class="{ hidden: iso, block: !iso }"
               stroke="currentColor"
               fill="none"
               viewBox="0 0 24 24"
@@ -70,7 +70,7 @@
             </svg>
             <svg
               class="h-5 w-5 sm:h-6 sm:w-6"
-              :class="{ block: isOpen, hidden: !isOpen }"
+              :class="{ block: iso, hidden: !iso }"
               stroke="currentColor"
               fill="none"
               viewBox="0 0 24 24"
@@ -88,7 +88,7 @@
 
       <div
         :class="[
-          isOpen
+          iso
             ? 'translate-y-0 opacity-100'
             : '-translate-y-full opacity-0 pointer-events-none',
         ]"
@@ -143,11 +143,11 @@
 </template>
 
 <script setup>
-const isOpen = ref(false);
+const iso = ref(false);
 
 const toggle = () => {
-  isOpen.value = !isOpen.value;
-  if (isOpen.value) {
+  iso.value = !iso.value;
+  if (iso.value) {
     document.body.style.overflow = "hidden";
   } else {
     document.body.style.overflow = "";
@@ -155,7 +155,7 @@ const toggle = () => {
 };
 
 const close = () => {
-  isOpen.value = false;
+  iso.value = false;
   document.body.style.overflow = "";
 };
 
