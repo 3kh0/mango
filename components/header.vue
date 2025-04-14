@@ -177,7 +177,9 @@ onMounted(() => {
 <style scoped>
 header {
   backdrop-filter: blur(8px);
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 header:hover {
