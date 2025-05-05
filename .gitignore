@@ -5,7 +5,6 @@
 .nitro
 .cache
 dist
-pnpm-lock.yaml
 pnpm-workspace.yaml
 
 # Node dependencies
