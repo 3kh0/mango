@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/icon",
     "nuxt-umami",
+    "@nuxthub/core",
   ],
   umami: {
     id: "ab5f5820-5c1d-4035-bbfc-8815f46dbfa2",
