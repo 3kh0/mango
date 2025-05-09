@@ -401,7 +401,7 @@
                 I also speak a few languages. I am fluent in English and
                 conversational in Chinese and Russian. More so in Chinese, as I
                 have my family to thank for that. I have picked up basic Russian
-                from friends and and Counter-Strike which is only the more
+                from friends and Counter-Strike which is only the more
                 "colorful" side, but a language is a language.
               </p>
             </div>
@@ -561,7 +561,7 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.1 },
+    { threshold: 0.1 }
   );
 
   document
