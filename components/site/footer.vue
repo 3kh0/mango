@@ -38,7 +38,6 @@
             <a
               href="https://www.mozilla.org/en-US/firefox/new/"
               target="_blank"
-              rel="noopener noreferrer"
             >
               <img
                 src="~/assets/media/88x31/firefox.png"
@@ -46,11 +45,7 @@
                 class="w-[88px] h-[31px] transition-transform duration-200 hover:scale-110 hover:z-10"
               />
             </a>
-            <a
-              href="https://getmonero.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://getmonero.org/" target="_blank">
               <img
                 src="~/assets/media/88x31/xmr.png"
                 alt="Get Monero"
@@ -60,7 +55,6 @@
             <a
               href="https://developer.valvesoftware.com/wiki/Source"
               target="_blank"
-              rel="noopener noreferrer"
             >
               <img
                 src="~/assets/media/88x31/source.png"
@@ -68,22 +62,14 @@
                 class="w-[88px] h-[31px] transition-transform duration-200 hover:scale-110 hover:z-10"
               />
             </a>
-            <a
-              href="https://ublockorigin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://ublockorigin.com/" target="_blank">
               <img
                 src="~/assets/media/88x31/ublock.png"
                 alt="Get uBlock Origin now!"
                 class="w-[88px] h-[31px] transition-transform duration-200 hover:scale-110 hover:z-10"
               />
             </a>
-            <a
-              href="https://grapheneos.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://grapheneos.org/" target="_blank">
               <img
                 src="~/assets/media/88x31/graphene.png"
                 alt="GrapheneOS"
@@ -100,36 +86,31 @@
           <p class="flex items-center justify-center mb-2">Friends :D</p>
 
           <div class="flex flex-wrap justify-center gap-2 mb-6">
-            <a
-              href="https://prpl.wtf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://prpl.wtf" target="_blank">
               <img
                 src="~/assets/media/88x31/prpl_wtf.gif"
                 alt="Emma"
                 class="w-[88px] h-[31px] transition-transform duration-200 hover:scale-110 hover:z-10"
               />
             </a>
-            <a
-              href="https://wearr.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://wearr.dev/" target="_blank">
               <img
                 src="~/assets/media/88x31/wearr.gif"
                 alt="wearr"
                 class="w-[88px] h-[31px] transition-transform duration-200 hover:scale-110 hover:z-10"
               />
             </a>
-            <a
-              href="https://bunnyguy.foo/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://bunnyguy.foo/" target="_blank">
               <img
                 src="~/assets/media/88x31/snipchu.gif"
                 alt="Tuyet"
+                class="w-[88px] h-[31px] transition-transform duration-200 hover:scale-110 hover:z-10"
+              />
+            </a>
+            <a href="https://bomberfish.ca/" target="_blank">
+              <img
+                src="~/assets/media/88x31/bomberfish.gif"
+                alt="bomberfish"
                 class="w-[88px] h-[31px] transition-transform duration-200 hover:scale-110 hover:z-10"
               />
             </a>
@@ -141,7 +122,6 @@
               <a
                 href="https://github.com/3kh0/mango"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="text-green-400 hover:underline flex items-center gap-1"
               >
                 <Icon name="radix-icons:github-logo" size="1.25rem" />
@@ -150,7 +130,6 @@
               <a
                 href="https://status.3kh0.net"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="text-green-400 hover:underline flex items-center gap-1"
               >
                 <Icon name="heroicons-solid:status-online" size="1.25rem" />
@@ -159,7 +138,6 @@
               <a
                 href="http://aqjeignx5ussinaa64hq3s2phleke6jmworiqe2tmlh4kctklyq6pjqd.onion"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="text-green-400 hover:underline flex items-center gap-1"
               >
                 <Icon name="lucide-lab:onion" size="1.25rem" />
@@ -168,7 +146,6 @@
               <a
                 href="/canary.txt"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="text-green-400 hover:underline flex items-center gap-1"
               >
                 <Icon
@@ -180,7 +157,6 @@
               <a
                 href="/pgp.txt"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="text-green-400 hover:underline flex items-center gap-1"
               >
                 <Icon name="fa6-solid:key" size="1.25rem" />
