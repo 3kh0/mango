@@ -46,7 +46,7 @@ export default function init() {
       fieldOfView,
       aspectRatio,
       nearPlane,
-      farPlane,
+      farPlane
     );
     camera.position.z = cameraZ;
 
@@ -61,7 +61,7 @@ export default function init() {
     }
 
     const positions = [];
-    count = 1000; // add more for lag
+    count = 500; // add more for lag
 
     for (i = 0; i < count; i++) {
       const x = Math.random() * 2000 - 1000;
@@ -74,7 +74,7 @@ export default function init() {
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute(
       "position",
-      new THREE.Float32BufferAttribute(positions, 3),
+      new THREE.Float32BufferAttribute(positions, 3)
     );
 
     parameters = [
