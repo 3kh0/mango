@@ -58,6 +58,7 @@
       <div class="flex items-center space-x-3">
         <button
           @click="play"
+          aria-label="Play/Pause"
           class="text-white hover:text-green-400 transition-colors"
         >
           <svg
@@ -86,6 +87,7 @@
 
         <button
           @click="skip"
+          aria-label="Skip"
           class="text-white hover:text-green-400 transition-colors mr-2"
         >
           <svg

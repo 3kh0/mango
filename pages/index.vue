@@ -42,6 +42,7 @@
           <div class="mt-12 text-center">
             <button
               @click="downTwo"
+              aria-label="Go to skills"
               class="animate-bounce bg-white/5 hover:bg-white/10 rounded-full p-3 transition-all duration-300 cursor-pointer"
             >
               <svg
