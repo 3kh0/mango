@@ -91,6 +91,8 @@
           iso
             ? 'translate-y-0 opacity-100'
             : '-translate-y-full opacity-0 pointer-events-none',
+          'bg-black/70', // fallback for fucking chrome of all things
+          'backdrop-blur-[3px]',
         ]"
         class="absolute top-full left-2 right-2 sm:left-3 sm:right-3 z-20 transition-all duration-300 transform origin-top md:hidden mt-2"
       >
