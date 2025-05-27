@@ -110,6 +110,13 @@
 <script setup>
 const projects = [
   {
+    name: "Stacked",
+    image: "/img/7f4c103a-6e89-484a-af86-8a5eb6a41f3d.png",
+    desc: "Stacked is an economy bot about collecting items, gambling, and using them to fight other players, all within Slack.",
+    tech: ["JavaScript", "Supabase", "Slack"],
+    git: "https://github.com/3kh0/stacked",
+  },
+  {
     name: "HCBScan",
     image: "/img/b23f69dc-9345-46e8-a1b2-abc6321b4bc3.png",
     desc: "HCBScan is an explorer for HCB that allows you to search for organizations, view transactions, and explore public financial data.",
