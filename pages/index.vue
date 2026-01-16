@@ -22,7 +22,7 @@
               <p
                 class="text-xl leading-relaxed text-white max-w-xl mx-auto md:mx-0"
               >
-                I am a 16 year old software developer, ethical hacker, furry,
+                I am a 17 year old software developer, ethical hacker, furry,
                 cybersecurity enthusiast, and privacy activist. I like to make
                 cool things, help out others, obsess over privacy, and
                 procrastinate.
